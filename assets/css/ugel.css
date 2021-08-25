@@ -1,0 +1,1044 @@
+body{
+    box-sizing: border-box;
+}
+
+/*----------------GRID PRINCIPAL-------------------*/
+#main{
+    width: 95%;
+    margin: auto;
+}
+.columna1{
+    grid-area: c1;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.7);
+    background: #fff;
+}
+
+.columna2{
+    grid-area: c2;
+    height: 100%;
+    background: #fff;
+    max-height: 400px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.7);
+}
+
+.contenido{
+    grid-area: con;
+    padding: 10px;
+    background: #fff;
+}
+
+.contenedor-grid{
+    position: relative;
+    width: 100%;
+    background: url(../img/img\ fondo/fondo2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 210px auto auto;
+    /*grid-template-columns: 330px auto auto;*/
+    /*grid-template-rows: 250px auto auto;*/
+    grid-template-areas: 
+    "c1 con con"
+    "c2 con con"
+    "c2 con con";
+    grid-gap: 20px 0;
+    font-size: 16px;
+    padding: 25px 80px 100px 80px;
+}
+
+
+
+/*-----------------lista Menu--------------*/
+.lista-menu{
+    margin: 15px;
+}
+
+.lista-menu ul {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 6px;
+    border: 1px solid #fff;
+}
+
+.lista-menu ul li a{
+    display: block;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.lista-menu ul li a:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+
+.lista-menu ul li a:hover:before{
+    width: 100%;
+}
+
+.lista-menu ul li a:hover{
+    background-color: rgba(0,0,0,.5);
+}
+
+.lista-menu ul:hover{
+    transform: scale(1.050 );
+}
+
+/*
+.lista-menu ul li a:hover{
+    background-color: rgba(0, 0, 0,.5);
+    
+}*/
+
+/*------------------Publicidad-----------------*/
+.sb-slider {
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 390px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.sb-slider li {
+    margin: 0;
+    padding: 0;
+    display: none;
+    overflow: hidden;
+}
+
+.sb-slider li > a {
+    outline: none;
+}
+
+.sb-slider li > a img {
+    border: none;
+    height: 300px;
+}
+
+.sb-slider img {
+    max-width: 100%;
+    display: block;
+}
+
+.sb-description {
+    padding: 10px;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    border-left: 4px solid #fff;
+    opacity: 0;
+    color: #fff;
+
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -ms-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.sb-slider li.sb-current .sb-description {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    opacity: 1;
+}
+
+.sb-slider li.sb-current .sb-description:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    filter: alpha(opacity=99);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.sb-perspective {
+    position: relative;
+}
+
+.sb-perspective > div {
+    position: absolute;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sb-side {
+    display: block;
+    position: absolute;
+    -moz-backface-visibility: hidden;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+/* custom style */
+.container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+
+.sb-description h3 {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.sb-description h3 a {
+    color: #4a3c27;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.nav-arrows {
+    display: none;
+}
+
+.nav-arrows a {
+    width: 42px;
+    height: 42px;
+    background: #000 url(https://tympanus.net/Development/Slicebox/images/nav.png) no-repeat top left;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    text-indent: -9000px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.nav-arrows a:first-child {
+    left: auto;
+    right: 20px;
+    background-position: top right;
+}
+
+.nav-arrows a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/*----------------SOBRE NOSOTROS-----------------*/
+.nosotros-titulo{
+    text-align: center;
+	font-size: 40px;
+	margin: 0 0 20px 0;
+}
+.contenido-principal{
+    padding: 20px;
+    width: 100%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido-one{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+
+}
+
+.contenido-two{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-contenido{
+    overflow: hidden;
+}
+
+.img-contenido img{
+    display: block;
+    margin: auto;
+    width: 600px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    filter: grayscale(25%);
+}
+
+.img-contenido img:hover{
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+    filter: grayscale(0%);
+
+}
+
+.texto-contenido{
+    width: 800px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+/*--------------------ORGANIGHRAMA-----------------------*/
+.organigrama-titulo{
+    text-align: center;
+	font-size: 40px;
+	margin: 0 0 30px 0;
+}
+.organigrama-titulo2{
+    display: none;
+    text-align: center;
+	font-size: 40px;
+	margin: 0 0 20px 0;
+}
+
+.image-wrap {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+   }
+   
+.image {
+    width: 100%;
+    height: 650px;
+    padding-top: calc(100% / (16/9));
+    background-image: url('../img/Organigrama-1024x922.jpg');
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #000;
+    box-shadow: 0 10px 10px 0  rgba(0, 0, 0, 0.6);
+    filter: grayscale(40%);
+    transition: filter 0.9s;
+    transition: background-size 0.4s;
+}
+
+.image:hover{
+    background-size: 170%;
+    cursor: zoom-in;
+    filter: grayscale(0%);
+}
+
+/*
+.organigrama{
+    width: 100%;
+    margin: 20px 20px;
+}
+.pdf{
+    width: 95%;
+    height: 650px;
+}
+*/
+.card{
+    display: none;
+	height: 320px;
+	width: 330px;
+	overflow: hidden;
+	margin: 10px auto;
+	padding: 10px 30px;
+	border-radius: 2%;
+	border: 5px solid #fff;
+	transition: all .4s ease-in-out;
+	box-shadow: 0px 10px 5px 0px rgba(0, 0, 0,.5);
+	text-align: center;
+	background: linear-gradient(-135deg,#141313,#2f2f33);
+}
+
+.card:hover{
+	height: 400px;
+	width: 330px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0,.5);
+}
+
+.card-encabezado img{
+	position: relative;
+	border-radius: 50%;
+	display: block;
+	height: 200px;
+	width: 220px;
+	border-top: 8px solid #fff;
+	border-right: 8px solid #fff;
+	object-fit: cover;
+	margin: 10px auto;
+	transition: all 0.3s ease;
+}
+
+.card-encabezado{
+	position: relative;
+}
+.card-encabezado:before, .card-encabezado:after{
+	content: "";
+	position: absolute;
+	opacity: .7;
+}
+
+.card-encabezado:after{
+	border-radius: 50%;
+	z-index: 100;
+	background: #fff;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	right: 25px;
+}
+
+.card-encabezado:before{
+	width: 70px;
+	height: 70px;
+	bottom: 0;
+	left: -10px;
+	border-radius: 20px;
+	background: rgb(150, 134, 134);
+	transform: rotate(120deg);
+}
+
+.desplazar{
+	opacity: 0;
+	transition: all .5s ease;
+	transform: translateY(-45px);
+}
+
+.agrandar{
+	transform: scale(1);
+	opacity: 0;
+	transition: all .4s ease;
+}
+
+.card:hover .agrandar{
+	opacity: 1;
+	transition: all .4s ease;
+}
+
+.card:hover .desplazar{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+
+
+.info-personal{
+	color: #fff;
+	font-size: 20px;
+}
+.info-personal p{
+font-size: 20px;
+color: #fff;
+}
+.card-acciones{
+	text-align: center;
+	margin-top: 25px;
+}
+.botones{
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 0 0 4px rgba(0, 0, 0,.2);
+	padding: 8px 15px;
+	font-size: 16px;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(90deg,#000000,#000000);
+	border: 1px solid #fff;
+	margin-top: -25px;
+}
+
+.botones:hover{
+	cursor: pointer;
+	width: 100%;
+}
+
+.botones span i{
+	margin-right: 10px;
+	font-size: 20px;
+}
+.link{
+    color: #fff;
+}
+
+ /*--------------------Institucion Educativa-----------------------*/
+ .portafolio{
+	width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.portafolio h3{
+	text-align: center;
+	font-size: 40px;
+	margin: 0 0 20px 0;
+}
+
+.portafolio-container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portafolio-item{
+    width: 30%;
+	position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+
+.portafolio-img{
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    object-position: center;
+    filter: grayscale(35%);
+}
+
+.portafolio-img:hover{
+    filter: grayscale(0%);
+}
+
+
+.portafolio-text{
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+
+	-webkit-transform: translateY(50%);
+
+	-ms-transform: translateY(50%);
+
+	transform: translateY(70%);
+
+	-webkit-transition: all 0.5s ease-out;
+
+	transition: all 0.5s ease-out;
+}
+.portafolio-text h2{
+    color: #fff;
+}
+
+.portafolio-text p{
+    text-align: justify;
+    color: #fff;
+}
+
+.portafolio-item:hover .portafolio-text{
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.portafolio-item:hover .portafolio-img{
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}
+/*---------------Directorio----------------*/
+.titulo-directivo{
+    text-align: center;
+	font-size: 40px;
+	margin: 0 0 20px 0;
+}
+
+.linea{
+    background: #000;
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 20px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.galeria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.7);
+}
+
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(35%);
+    transition: transform 0.5s;
+}
+
+.galeria a:hover img{
+    transform:scale(1.15);
+    filter: grayscale(0%);
+}
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+}
+
+.light-box img{
+    width: 50vw;
+    max-height: 75vh;
+
+}
+.light-box:target{
+    transform: scale(1);
+}
+.descripcion-img{
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+}
+.descripcion-img h3{
+    color: #000;
+    margin: 30px 0;
+}
+.descripcion-img p{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    background: #851919;
+    color: #fff;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+}
+
+.next{
+    display: block;
+    background: #851919;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 30px;
+}
+
+
+
+/*---------------RESPONSIVE----------------*/
+@media screen and (max-width:1377px){
+
+    .portafolio-container{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        
+        -ms-flex-pack: justify;
+    }
+    .portafolio-item{
+        width: 50%;
+    }
+
+    .contenido-principal{
+        padding: 20px;
+        width: 95%;
+        margin:auto;
+    }
+    
+    .contenido-one{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .contenido-two{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    
+    .img-contenido img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .texto-contenido{
+        width: 250px;
+        height: 300px;
+        margin: 10px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width:900px){
+    .contenedor-grid{
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "c1 c1 c1"
+        "con con con"
+        "c2 c2 c2";
+
+        padding: 0 0px 30px 0px;
+    }
+    /*---------------PUBLICIDAD----------------*/
+    .sb-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* custom style */
+    .container {
+        width: 100%;
+
+    }
+    
+    
+    .sb-description h3 {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+    
+    }
+
+/*-------------Sobre nosotro------------*/
+.contenido-principal{
+    padding: 20px;
+    width: 95%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-one{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.contenido-two{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.img-contenido img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.texto-contenido{
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+}
+/*---------Organigrama-----------------*/
+.organigrama{
+    display: none;
+}
+.organigrama-titulo{
+    display: none;
+}
+
+.organigrama-titulo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+	height: 320px;
+	width: 330px;
+	overflow: hidden;
+	margin: 10px auto;
+	padding: 10px 30px;
+	border-radius: 2%;
+	border: 5px solid #fff;
+	transition: all .4s ease-in-out;
+	box-shadow: 0px 10px 5px 0px rgba(0, 0, 0,.5);
+	text-align: center;
+	background: linear-gradient(-135deg,#141313,#2f2f33);
+}
+
+.card:hover{
+	height: 400px;
+	width: 330px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0,.5);
+}
+
+.card-encabezado img{
+	position: relative;
+	border-radius: 50%;
+	display: block;
+	height: 200px;
+	width: 220px;
+	border-top: 8px solid #fff;
+	border-right: 8px solid #fff;
+	object-fit: cover;
+	margin: 10px auto;
+	transition: all 0.3s ease;
+}
+
+.card-encabezado{
+	position: relative;
+}
+.card-encabezado:before, .card-encabezado:after{
+	content: "";
+	position: absolute;
+	opacity: .7;
+}
+
+.card-encabezado:after{
+	border-radius: 50%;
+	z-index: 100;
+	background: #fff;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	right: 25px;
+}
+
+.card-encabezado:before{
+	width: 70px;
+	height: 70px;
+	bottom: 0;
+	left: -10px;
+	border-radius: 20px;
+	background: rgb(150, 134, 134);
+	transform: rotate(120deg);
+}
+
+.desplazar{
+	opacity: 0;
+	transition: all .5s ease;
+	transform: translateY(-45px);
+}
+
+.agrandar{
+	transform: scale(1);
+	opacity: 0;
+	transition: all .4s ease;
+}
+
+.card:hover .agrandar{
+	opacity: 1;
+	transition: all .4s ease;
+}
+
+.card:hover .desplazar{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+
+
+.info-personal{
+	color: #fff;
+	font-size: 20px;
+}
+.info-personal p{
+font-size: 20px;
+color: #fff;
+}
+.card-acciones{
+	text-align: center;
+	margin-top: 25px;
+}
+.botones{
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 0 0 4px rgba(0, 0, 0,.2);
+	padding: 8px 15px;
+	font-size: 16px;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(90deg,#000000,#000000);
+	border: 1px solid #fff;
+	margin-top: -25px;
+}
+
+.botones:hover{
+	cursor: pointer;
+	width: 100%;
+}
+
+.botones span i{
+	margin-right: 10px;
+	font-size: 20px;
+}
+.link{
+    color: #fff;
+}
+
+/*--------------------Institucion Educativa-----------------------*/
+
+
+.portafolio{
+	width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.portafolio h3{
+	text-align: center;
+	font-size: 40px;
+	margin: 0 0 20px 0;
+}
+
+.portafolio-container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	
+	-ms-flex-pack: justify;
+    
+}
+
+.portafolio-item{
+	width: 50%;
+	position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.portafolio-img{
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.portafolio-text{
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+
+	-webkit-transform: translateY(100%);
+
+	-ms-transform: translateY(100%);
+
+	transform: translateY(100%);
+
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.portafolio-text h2{
+    color: #fff;
+}
+
+.portafolio-text p{
+    text-align: justify;
+    color: #fff;
+}
+
+.portafolio-item:hover .portafolio-text{
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.portafolio-item:hover .portafolio-img{
+	-webkit-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+/*--------------DIRECTIVOS---------------*/
+.close{
+    top: 150px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+}
+
+.next{
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    margin: 0px;
+}
+
+}
+@media screen and (max-width:650px){
+    .portafolio-item{
+        width: 100%;
+    }
+}

@@ -1,0 +1,17 @@
+ugel 2 ---- direccion
+
+ugel 4 ---apoyo-area de administracion--organo institucional
+
+ugel 5 --- apoyo -- control
+
+ugel 6 --apoyo ---- control -gestion pedagogica
+
+ugel 14 ----- gestion pedagogica e institucional
+
+ugel 6 -- guia de tramite
+
+ugel 7 --- Inforemacion de Tramite
+
+ugel 9 --- Guia de tramite
+
+ugel 15 ---- tramite documentario

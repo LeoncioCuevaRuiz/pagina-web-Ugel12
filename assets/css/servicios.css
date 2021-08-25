@@ -1,0 +1,165 @@
+.grid-conteiner{
+	width: 80%;
+	margin: auto;
+	max-width: 68.75rem;
+}
+
+body{
+	font-size: 16px;
+}
+
+.title-article{
+	grid-area: title;
+}
+
+.title-guia{
+	font-size:3.125em;
+}
+
+.item1{
+	grid-area: columnaUno;
+	background-color: #0075b8;
+
+}
+
+.item1:hover{
+	background-color: #3f7796;
+}
+
+
+.item2{
+	grid-area: columnaDos;
+	background-color: #0075b8;
+
+}
+
+.item2:hover{
+	background-color: #3f7796;
+}
+
+.item3{
+	grid-area: columnaTres;
+	background-color: #0075b8;
+
+}
+
+.item3:hover{
+	background-color: #3f7796;
+}
+
+.item4{
+	grid-area: imagen;
+	background-color: #0075b8;
+}
+
+.grid-tresColumnas{
+	display: grid;
+	grid-template-areas: 
+	"title	 	title 		title"
+	"columnaUno columnaDos 	columnaTres"
+	"columnaUno columnaDos 	columnaTres"
+	"imagen 	imagen 		imagen";
+	grid-gap: 1.25em;
+	padding: 1.25em;
+
+}
+
+.grid-tresColumnas > div{
+	text-align: center;
+  	padding: 1.25rem 1.25rem;
+  	font-size: 0.9375rem;
+  	margin: auto;
+}
+
+.text-conteiner1{
+	color: #fff; 
+}
+
+.text-conteinerUno ul li {
+	color: #fff;
+} 
+
+
+.text-conteinerDos ul li {
+	color: #fff;
+} 
+.text-conteinerDos ul li:hover{
+	color: #fff;	
+} 
+
+.text-conteinerTres ul li {
+	color: #fff;
+} 
+
+
+@media (max-width: 1200px){
+	.grid-tresColumnas > div{
+		  font-size: 13px;
+	}
+
+}
+
+@media (max-width: 992px){
+
+	.title-guia{
+		font-size:45px;
+	}
+
+	.grid-tresColumnas{
+		display: grid;
+		grid-template-areas: 
+		"title	 	title 		title"
+		"columnaUno columnaUno columnaUno"
+		"columnaDos columnaDos 	columnaDos"
+		"columnaTres columnaTres columnaTres"
+		"imagen 	imagen 		imagen";
+		grid-gap: 1.25em;
+		padding: 1.25em;
+	
+	}
+
+
+}
+
+@media (max-width: 768px){
+
+	.title-guia{
+		font-size:40px;
+	}
+
+	.grid-tresColumnas > div{
+		font-size: 12px;
+  }
+	
+	.grid-tresColumnas{
+		display: grid;
+		grid-template-areas: 
+		"title	 	title 		title"
+		"columnaUno columnaUno columnaUno"
+		"columnaDos columnaDos 	columnaDos"
+		"columnaTres columnaTres columnaTres"
+		"imagen 	imagen 		imagen";
+		grid-gap: 1.25em;
+		padding: 1.25em;
+	
+	}
+
+
+}
+
+@media (max-width: 576px){
+
+	.title-guia{
+		font-size:35px;
+	}
+	
+
+	.grid-tresColumnas > div{
+		text-align: center;
+		  padding: 18px 18px;
+		  font-size: 11px;
+		  margin: auto;
+	}
+
+}
+

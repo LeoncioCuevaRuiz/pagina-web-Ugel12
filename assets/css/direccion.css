@@ -1,0 +1,296 @@
+
+
+/*------------------------CONTENIDO DE LA ESTRUCTURA ORGANICA---------------------------*/
+.columna1{
+    grid-area: c1;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
+    background: #fff;
+    height: 405px;
+}
+
+.columna2{
+    grid-area: c2;
+    height: 100%;
+    background: #fff;
+    margin-top: 200px;
+    max-height: 400px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
+}
+
+.contenido{
+    grid-area: con;
+    padding: 10px;
+    background: #fff;
+}
+
+.contenedor-grid{
+    position: relative;
+    width: 100%;
+    background: url(../img/img\ fondo/fondo2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 210px auto auto;
+    /*grid-template-columns: 330px auto auto;*/
+    /*grid-template-rows: 250px auto auto;*/
+    grid-template-areas: 
+    "c1 con con"
+    "c2 con con"
+    "c2 con con";
+    grid-gap: 20px 0;
+    font-size: 16px;
+    padding: 25px 80px 100px 80px;
+}
+
+.lista-menu{
+    margin: 15px;
+}
+
+.lista-menu ul {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 6px;
+    border: 1px solid #fff;
+}
+
+.lista-menu ul li a{
+    display: block;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.lista-menu ul li a:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+
+.lista-menu ul li a:hover:before{
+    width: 100%;
+}
+
+.lista-menu ul li a:hover{
+    background-color: rgba(0,0,0,.5);
+}
+
+.lista-menu ul:hover{
+    transform: scale(1.050 );
+}
+
+.enlaces{
+    background: #c80000 !important;
+}
+
+.enlaces:hover{
+    background: #c80000c4 !important;
+}
+
+/*------------------------------------DIRECCION---------------------------*/
+
+.contenido-direccion{
+    padding: 20px;
+    margin: 20px;
+}
+
+.contenido-direccion .direccion-parrafo p{
+        font-size: 20px;
+        text-align: justify;
+}
+
+.contenido-direccion .direccion-lista ul{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+
+.contenido-direccion .direccion-lista ul li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+    
+}
+
+.contenido-direccion .direccion-lista ul:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+/*------------------Apoyo ---Area de Administracion------------------------*/
+
+.contenido-apoyo{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenido-apoyo .apoyo-parrafo p{
+    font-size: 20px;
+        text-align: justify;
+}
+.contenido-apoyo .apoyo-lista{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+.contenido-apoyo .apoyo-lista li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+}
+
+.contenido-apoyo .apoyo-lista:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+
+/*--------------------------CONTROL INTERNO-----------------------------------------*/
+
+.contenido-control{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenido-control .control-parrafo p{
+    font-size: 20px;
+        text-align: justify;
+}
+.contenido-control .control-lista{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+.contenido-control .control-lista li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+}
+
+.contenido-control .control-lista:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+/*--------------------------GESTION INSTITUCIONAL-----------------------------------------*/
+
+.contenido-gestionInstitucional{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenido-gestionInstitucional .control-parrafo p{
+    font-size: 20px;
+        text-align: justify;
+}
+.contenido-gestionInstitucional .gestionPedagogica-lista{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+.contenido-gestionInstitucional .gestionPedagogica-lista li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+}
+
+.contenido-gestionInstitucional .gestionPedagogica-lista:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+
+/*--------------------------GESTION PEDAGOGICA-----------------------------------------*/
+
+.contenido-gestionPedagogica{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenido-gestionPedagogica .control-parrafo p{
+    font-size: 20px;
+        text-align: justify;
+}
+.contenido-gestionPedagogica .gestionPedagogica-lista{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+.contenido-gestionPedagogica .gestionPedagogica-lista li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+}
+
+.contenido-gestionPedagogica .gestionPedagogica-lista:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+
+
+
+/*----------------------------------RESPONSIVE ESTRUCUTURA ORGANICA------------------*/
+
+@media (max-width:900px){
+
+    /*--------------------------RESPONSIVE DEL CONTENEDOR PRINCIPAL-----------------------------------------*/
+    .contenedor-grid{
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "c1 c1 c1"
+        "con con con"
+        "c2 c2 c2";
+
+        padding: 0 0px 30px 0px;
+    }
+
+    .contenido{
+        margin-top: 200px;
+    }
+
+    .columna2{
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    /*--------------------------DIRECCION-----------------------------------------*/
+
+    .contenido-direccion{
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .contenido-direccion .direccion-parrafo p{
+            font-size: 18px;
+            text-align: justify;
+    }
+    
+    .contenido-direccion .direccion-lista ul{
+        margin: 15 0px;
+        padding: 10px;
+    }
+    
+    .contenido-direccion .direccion-lista ul li{
+        padding: 10px;
+        text-align: justify;
+    }
+
+    /*--------------------------AREA DE ADMINISTRACION-----------------------------------------*/
+
+    .contenido-apoyo .apoyo-lista li{
+        text-align: justify;
+    }
+
+    /*--------------------------CONTROL INTERNO-----------------------------------------*/
+    
+
+}

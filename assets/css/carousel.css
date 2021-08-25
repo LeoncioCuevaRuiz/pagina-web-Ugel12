@@ -1,0 +1,60 @@
+/*ESTILOS DEL CAROUSEL*/
+
+.titulo {
+    font-size: 50px;
+    margin-bottom: -10px;
+    color: #000;
+    text-align: center;
+  }
+  
+  
+  .carousel{
+    min-height: 300px;
+  }
+  
+  
+  .carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*cover*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+    border: 1px solid #000;
+    
+  }
+  
+  .carousel .indicators .indicators-item{
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 50px 10px;
+    background: #36221c;
+  }
+  
+  @media (max-width: 992px){
+    .carousel{
+        min-height: 220px;
+    }
+    
+    .carousel .carousel-item{
+        width: 200px;
+        height: 200px;
+    }
+  
+    .titulo {
+        font-size: 35px;
+        margin-bottom: 5px;
+        color: #000;
+    }
+  }

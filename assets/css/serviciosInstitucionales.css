@@ -1,0 +1,280 @@
+/*------------------------CONTENIDO DE LA ESTRUCTURA ORGANICA---------------------------*/
+.columna1{
+    grid-area: c1;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
+    background: #fff;
+    height: 120px;
+}
+
+.columna2{
+    grid-area: c2;
+    height: 100%;
+    background: #fff;
+    max-height: 400px;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
+}
+
+.contenido{
+    grid-area: con;
+    padding: 10px;
+    background: #fff;
+}
+
+.contenedor-grid{
+    position: relative;
+    width: 100%;
+    background: url(../img/img\ fondo/fondo2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor-grid{
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 210px auto auto;
+    /*grid-template-columns: 330px auto auto;*/
+    /*grid-template-rows: 250px auto auto;*/
+    grid-template-areas: 
+    "c1 con con"
+    "c2 con con"
+    "c2 con con";
+    grid-gap: 20px 0;
+    font-size: 16px;
+    padding: 25px 80px 100px 80px;
+}
+
+.lista-menu{
+    margin: 15px;
+}
+
+.lista-menu ul {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 6px;
+    border: 1px solid #fff;
+}
+
+.lista-menu ul li a{
+    display: block;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.lista-menu ul li a:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+
+.lista-menu ul li a:hover:before{
+    width: 100%;
+}
+
+.lista-menu ul li a:hover{
+    background-color: rgba(0,0,0,.5);
+}
+
+.lista-menu ul:hover{
+    transform: scale(1.050 );
+}
+
+/*-----------------------GUIA DE TRAMITE-----------*/
+.contenido-guiaT{
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenido-guiaT .guiaT-parrafo p{
+    font-size: 20px;
+        text-align: justify;
+}
+.contenido-guiaT .guiaT-lista{
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 2px dotted #000;
+    transition: all .4s;
+}
+.contenido-guiaT .guiaT-lista li{
+    background: rgb(212, 208, 208);
+    padding: 15px;
+}
+
+.contenido-guiaT .guiaT-lista:hover{
+    border-bottom: 5px solid #000;
+    transform: scale(1.03);
+}
+
+
+
+.acordion{
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.acordion-item{
+    background: #c80000;
+    color: #fff;
+    margin: 20px 0;
+    border-radius: 30px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: transform .3s;
+}
+
+.acordion-item-header{
+    padding: 15px;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.acordion-item:hover{
+    background: rgb(231, 17, 17);
+    transform: scale(1.04);
+}
+
+
+.acordion-item-header::after{
+    content: "+";
+    font-size: 30px;
+    position: absolute;
+    right: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.acordion-item-header.active::after{
+    /*content: "-";*/
+    transform: rotate(45deg);
+}
+
+.acordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.acordion-item-body-content{
+    padding: 20px;
+    line-height: 1.5rem;
+    border-top: 5px solid rgb(44, 44, 43);
+    border-image: linear-gradient(to right,transparent, rgb(255, 255, 255), transparent) 1;
+}
+
+.acordion-item-body-content .enlaceG{
+    background: #fff;
+}
+
+.acordion-item-header.active + .acordion-item-body {
+    max-height: 1000px;
+}
+
+.acordion-item-body-content .enlaceG li{
+    list-style: none;
+}
+
+.acordion-item-body-content .enlaceG li a{
+    display: block;
+    text-decoration: none;
+    color: #c80000;
+    padding: 12px 10px;
+}
+.acordion-item-body-content .enlaceG li a:hover{
+    background: rgb(243, 233, 233);
+    color: red;
+    text-decoration: underline;
+}
+.acordion-item-body-content .enlaceG li a:focus{
+    color: #000;
+    text-decoration: underline;
+}
+
+/*-----------------------Informacion de tramite-----------*/
+
+.contenido-tramite p{
+    font-size: 20px;
+    padding: 15px;
+    margin: 30px 20px;
+    background: #dbd9d9;
+    color: #000;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 300px;
+}
+
+.tramite-img{
+    margin: 30px;
+}
+
+.tramite-img img {
+    display: block;
+    width: 500px;
+    margin: 20px auto;
+    border: 3px solid #000;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.tramite-img p{
+    padding: 15px;
+    text-align: center;
+    background: #dbd9d9;
+    color: #000;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.acordion-item-body-content .enlaceT{
+    background: #fff;
+}
+
+
+.acordion-item-body-content .enlaceT li{
+    list-style: none;
+    
+}
+
+.acordion-item-body-content .enlaceT li a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 12px 10px;
+}
+.acordion-item-body-content .enlaceT li a:hover{
+    background: rgb(243, 233, 233);
+    color: rgb(65, 62, 62);
+}
+
+
+@media (max-width:900px){
+
+    /*--------------------------RESPONSIVE DEL CONTENEDOR PRINCIPAL-----------------------------------------*/
+    .contenedor-grid{
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+        "c1 c1 c1"
+        "con con con"
+        "c2 c2 c2";
+
+        padding: 0 0px 30px 0px;
+    }
+
+    .contenido{
+        margin-top: -85px;
+    }
+
+    .columna2{
+        margin-top: 0px;
+    }
+}
